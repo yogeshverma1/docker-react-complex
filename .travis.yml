@@ -13,7 +13,6 @@ before_install:
 
 script:
   - docker run -e CI=true yogeshverma1/docker-react-complex npm test
-  - docker run -e CI=true USERNAME/react-test npm test
 
 after_success:
     - docker build -t yogeshverma1/complex-client ./client
